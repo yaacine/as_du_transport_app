@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include as_du_transport *.css
+recursive-include as_du_transport *.csv
+recursive-include as_du_transport *.html
+recursive-include as_du_transport *.ico
+recursive-include as_du_transport *.js
+recursive-include as_du_transport *.json
+recursive-include as_du_transport *.md
+recursive-include as_du_transport *.png
+recursive-include as_du_transport *.py
+recursive-include as_du_transport *.svg
+recursive-include as_du_transport *.txt
+recursive-exclude as_du_transport *.pyc
