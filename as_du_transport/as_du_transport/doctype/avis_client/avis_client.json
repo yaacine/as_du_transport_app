@@ -1,0 +1,66 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2021-10-31 00:40:49.726999",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "full_name",
+  "job",
+  "rating",
+  "review",
+  "user_image"
+ ],
+ "fields": [
+  {
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "label": "Nom Complet"
+  },
+  {
+   "fieldname": "job",
+   "fieldtype": "Data",
+   "label": "Profession"
+  },
+  {
+   "fieldname": "rating",
+   "fieldtype": "Int",
+   "label": "Notation"
+  },
+  {
+   "fieldname": "review",
+   "fieldtype": "Small Text",
+   "label": "Avis"
+  },
+  {
+   "fieldname": "user_image",
+   "fieldtype": "Image",
+   "label": "Avatar"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2021-10-31 00:40:49.726999",
+ "modified_by": "Administrator",
+ "module": "As Du Transport",
+ "name": "Avis Client",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
