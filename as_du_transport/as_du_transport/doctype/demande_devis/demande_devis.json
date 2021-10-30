@@ -1,0 +1,97 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2021-10-31 00:24:00.891958",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "full_customer_name",
+  "phone_number",
+  "email",
+  "date",
+  "customer_type",
+  "service_type",
+  "sending_type",
+  "quantity",
+  "time"
+ ],
+ "fields": [
+  {
+   "fieldname": "full_customer_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Nom Complet",
+   "reqd": 1
+  },
+  {
+   "fieldname": "phone_number",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Telephone",
+   "reqd": 1
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Email",
+   "reqd": 1
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Jour"
+  },
+  {
+   "fieldname": "customer_type",
+   "fieldtype": "Select",
+   "label": "Type du client",
+   "options": "Entreprise\nParticulier"
+  },
+  {
+   "fieldname": "service_type",
+   "fieldtype": "Data",
+   "label": "Type de service"
+  },
+  {
+   "fieldname": "sending_type",
+   "fieldtype": "Data",
+   "label": "Type d'envoi"
+  },
+  {
+   "fieldname": "quantity",
+   "fieldtype": "Int",
+   "label": "Qnatiti\u00e9"
+  },
+  {
+   "fieldname": "time",
+   "fieldtype": "Time",
+   "label": "Heure"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2021-10-31 00:24:00.891958",
+ "modified_by": "Administrator",
+ "module": "As Du Transport",
+ "name": "Demande Devis",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
