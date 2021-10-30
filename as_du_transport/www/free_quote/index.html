@@ -1,0 +1,17 @@
+
+{% extends 'templates/asdutransport_base.html' %}
+
+{% block content %}
+
+hello
+
+{% for user in users %}
+<li>{{ user}}</li>
+{% endfor %}
+
+
+{% for demande_devis in demandes_devis %}
+<li>{{ demande_devis.full_name}}  || {{ demande_devis.email}}</li>
+{% endfor %}
+
+{% endblock %}
