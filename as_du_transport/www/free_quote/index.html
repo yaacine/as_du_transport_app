@@ -14,4 +14,14 @@ hello
 <li>{{ demande_devis.full_name}}  || {{ demande_devis.email}}</li>
 {% endfor %}
 
+
+
+{% for blogpost in blogposts %}
+<h1>{{ blogpost.title}}</h1>  || 
+<p>{{ blogpost.blog_intro}}</p>
+<p>{{ blogpost.blog_content}}</p>
+{% endfor %}
+
+
+
 {% endblock %}
