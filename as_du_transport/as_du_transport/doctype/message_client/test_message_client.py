@@ -4,5 +4,5 @@
 # import frappe
 import unittest
 
-class TestContacs(unittest.TestCase):
+class TestMessageClient(unittest.TestCase):
 	pass
