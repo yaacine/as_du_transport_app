@@ -4,5 +4,5 @@
 # import frappe
 import unittest
 
-class TestHorairesdeservice(unittest.TestCase):
+class TestHorairesdeservicesemaine(unittest.TestCase):
 	pass

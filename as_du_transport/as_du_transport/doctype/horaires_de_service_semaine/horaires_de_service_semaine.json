@@ -6,21 +6,39 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "timings"
+  "starting_day",
+  "starting_time",
+  "end_day",
+  "end_time"
  ],
  "fields": [
   {
-   "fieldname": "timings",
+   "fieldname": "starting_day",
    "fieldtype": "Data",
-   "label": "Horaires"
+   "label": "Jour Debut"
+  },
+  {
+   "fieldname": "starting_time",
+   "fieldtype": "Time",
+   "label": "Heure Debut"
+  },
+  {
+   "fieldname": "end_day",
+   "fieldtype": "Data",
+   "label": "Jour Fin"
+  },
+  {
+   "fieldname": "end_time",
+   "fieldtype": "Time",
+   "label": "Heure Fin"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-10-30 21:59:40.185816",
+ "modified": "2021-11-01 10:27:18.924554",
  "modified_by": "Administrator",
  "module": "As Du Transport",
- "name": "Horaires de service",
+ "name": "Horaires de service semaine",
  "owner": "Administrator",
  "permissions": [
   {
