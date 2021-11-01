@@ -1,5 +1,7 @@
 from . import __version__ as app_version
 
+from as_du_transport.routes import routes
+
 app_name = "as_du_transport"
 app_title = "As Du Transport"
 app_publisher = "yacine"
@@ -46,6 +48,10 @@ app_license = "MIT"
 # role_home_page = {
 #	"Role": "home_page"
 # }
+
+
+website_route_rules = routes 
+
 
 # Generators
 # ----------
