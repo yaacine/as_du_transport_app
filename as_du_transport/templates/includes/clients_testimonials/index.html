@@ -1,0 +1,30 @@
+{% set testimonials= frappe.get_all("Avis Client" ,fields=['full_name','job','rating','review','user_image'], start=0, page_length=5) %}
+{% if testimonials%}
+    <div class="testimonial_area">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-7">
+                    <div class="testmonial_active owl-carousel">
+                        {% for testimonial in testimonials%}
+                        <div class="single_carousel">
+                            <div class="single_testmonial text-center">
+                                <div class="quote">
+                                    <img src="/assets/as_du_transport/as_du_transport_public/img/svg_icon/quote.svg" alt="">
+                                </div>
+                                <p>{{testimonial.review}}</p>
+                                <div class="testmonial_author">
+                                    <div class="thumb">
+                                        <img src="{{testimonial.user_image}}" height="100%" style="border-radius: 50%;"  alt="">
+                                    </div>
+                                    <h3>{{testimonial.full_name}}</h3>
+                                    <span>{{testimonial.job}}</span>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endif %}
