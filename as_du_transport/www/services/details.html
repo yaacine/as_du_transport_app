@@ -38,6 +38,13 @@
                                 <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel"
                                     aria-labelledby="v-pills-home-tab">
                                     <div class="service_details_info">
+                                        {% if single_service.service_title=="Déménagement" %}
+                                            <a href="/demenagement-services">
+                                                <div class="alert alert-primary" role="alert" >Voir les services de Déménagement </div> </a>
+                                                
+                                            </a>
+
+                                        {% endif %}
                                         {{single_service.full_description}}
                                     </div>
                                 </div>

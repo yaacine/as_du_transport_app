@@ -8,7 +8,7 @@
  "field_order": [
   "service_title",
   "short_description",
-  "service_description",
+  "full_description",
   "service_full_image",
   "service_short_image"
  ],
@@ -24,24 +24,24 @@
    "label": "Description courte"
   },
   {
-   "fieldname": "service_description",
-   "fieldtype": "Long Text",
-   "label": "Description longue"
-  },
-  {
    "fieldname": "service_full_image",
-   "fieldtype": "Image",
+   "fieldtype": "Attach Image",
    "label": "Image service details"
   },
   {
    "fieldname": "service_short_image",
-   "fieldtype": "Image",
+   "fieldtype": "Attach Image",
    "label": "Image service avatar"
+  },
+  {
+   "fieldname": "full_description",
+   "fieldtype": "Text Editor",
+   "label": "Description longue"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-11-01 10:19:52.343115",
+ "modified": "2021-11-02 11:54:11.474446",
  "modified_by": "Administrator",
  "module": "As Du Transport",
  "name": "Service demenagement",
