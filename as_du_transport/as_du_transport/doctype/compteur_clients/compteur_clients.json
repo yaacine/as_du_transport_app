@@ -1,0 +1,60 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2021-11-06 16:23:48.697174",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "covered_cities",
+  "successfull_missions",
+  "satisfied_clients",
+  "success_stories"
+ ],
+ "fields": [
+  {
+   "fieldname": "covered_cities",
+   "fieldtype": "Int",
+   "label": "Villes couvertes"
+  },
+  {
+   "fieldname": "successfull_missions",
+   "fieldtype": "Int",
+   "label": "Missions r\u00e9ussies"
+  },
+  {
+   "fieldname": "satisfied_clients",
+   "fieldtype": "Int",
+   "label": "Clients Satisfaits"
+  },
+  {
+   "fieldname": "success_stories",
+   "fieldtype": "Int",
+   "label": "Succes"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2021-11-06 16:23:48.697174",
+ "modified_by": "Administrator",
+ "module": "As Du Transport",
+ "name": "Compteur clients",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

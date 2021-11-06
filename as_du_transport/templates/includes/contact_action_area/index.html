@@ -1,3 +1,5 @@
+{% set advertisement= frappe.get_all("Bande annonce", fields=['title','intro'], start=0, page_length=1) %}   
+{% if advertisement %}
 
     <!-- contact_action_area  -->
     <div class="contact_action_area">
@@ -6,17 +8,21 @@
                 <div class="col-xl-7 col-md-6">
                     <div class="action_heading">
                        
-                        <h3>100% secure and safe</h3>
-                        <p>Esteem spirit temper too say adieus who direct esteem. It look estee luckily or picture
-                            placing drawing.</p>
+                        <h3>{{advertisement[0].title}}</h3>
+                        <p>{{advertisement[0].intro}}</p>
                     </div>
                 </div>
                 <div class="col-xl-5 col-md-6">
                     <div class="call_add_action">
-                        <a href="#" class="boxed-btn3">+10 672 457 356</a>
+                        {% set company_contacts= frappe.get_all("Contacts", fields=['mobile'], start=0, page_length=1) %}
+                        {% if company_contacts %}
+                            <a href="#" class="boxed-btn3">{{company_contacts[0].mobile}}</a>
+                        {% endif %}   
+                        
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <!-- /contact_action_area  -->
+{% endif %}

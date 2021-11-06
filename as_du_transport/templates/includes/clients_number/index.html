@@ -1,33 +1,32 @@
-{% set clients_number= "hello"  %}
-{% if clients_number%}
-<!-- 
 
-    frappe.get_all("Compteur clients" ,fields=['covered_cities','successfull_missions','satisfied_clients','success_stories'], start=0, page_length=1)
+{% set clients_number= frappe.get_all("Compteur clients" ,fields=['covered_cities','successfull_missions','satisfied_clients','success_stories'], start=0, page_length=1)  %}
+{% if clients_number%} 
+    
 <div class="counter_area">
     <div class="container">
         <div class="offcan_bg">
             <div class="row">
                 <div class="col-xl-3 col-md-3">
                     <div class="single_counter text-center">
-                        <h3> <span class="counter">{{clients_number.covered_cities}}</span> <span>+</span> </h3>
+                        <h3> <span class="counter">{{clients_number[0].covered_cities}}</span> <span>+</span> </h3>
                         <p>Villes Couvertes</p>
                     </div>
                 </div>
                 <div class="col-xl-3 col-md-3">
                     <div class="single_counter text-center">
-                        <h3> <span class="counter">{{clients_number.successfull_missions}}</span> <span>+</span> </h3>
+                        <h3> <span class="counter">{{clients_number[0].successfull_missions}}</span> <span>+</span> </h3>
                         <p>Missions Accomplies</p>
                     </div>
                 </div>
                 <div class="col-xl-3 col-md-3">
                     <div class="single_counter text-center">
-                        <h3> <span class="counter">{{clients_number.satisfied_clients}}</span></h3>
+                        <h3> <span class="counter">{{clients_number[0].satisfied_clients}}</span></h3>
                         <p>Clients Satisfaits</p>
                     </div>
                 </div>
                 <div class="col-xl-3 col-md-3">
                     <div class="single_counter text-center">
-                        <h3> <span class="counter">{{clients_number.success_stories}}</span></h3>
+                        <h3> <span class="counter">{{clients_number[0].success_stories}}</span></h3>
                         <p>Succès Businness</p>
                     </div>
                 </div>
@@ -35,6 +34,6 @@
         </div>
 
     </div>
-</div> -->
+</div>
 
 {% endif %}

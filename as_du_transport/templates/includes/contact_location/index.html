@@ -1,33 +1,40 @@
+{% set  company_logo= frappe.get_all("Logo Entreprise", fields=['image'], start=0, page_length=1) %}
+{% set company_contacts= frappe.get_all("Contacts", fields=['mobile','email','telephone','adresse','facebook_account','twitter_account','linkedin_account'], start=0, page_length=1) %}   
+
 <div class="contact_location">
     <div class="container">
         <div class="row">
             <div class="col-xl-6 col-lg-6 col-md-6">
                 <div class="location_left">
                     <div class="logo">
-                        <a href="index.html">
-                            <img src="/assets/as_du_transport/as_du_transport_public/img/logo.png" alt="">
+                        <a href="/">
+                            {% if company_logo|length > 0  %}
+                                <img src="{{company_logo[0].image}}" height="80px"  width="140" alt="">
+                            {% endif %}
                         </a>
                     </div>
-                    <ul>
-                        <li><a href="#"> <i class="fa fa-facebook"></i> </a></li>
-                        <li><a href="#"> <i class="fa fa-google-plus"></i> </a></li>
-                        <li><a href="#"> <i class="fa fa-twitter"></i> </a></li>
-                        <li><a href="#"> <i class="fa fa-youtube"></i> </a></li>
-                    </ul>
+                    {% if company_contacts |length > 0 %}
+                        <ul>
+                            <li><a href="{{company_contacts[0].facebook_account}}"> <i class="fa fa-facebook"></i> </a></li>
+                            <li><a href="{{company_contacts[0].facebook_account}}"> <i class="fa fa-google-plus"></i> </a></li>
+                            <li><a href="{{company_contacts[0].twitter_account}}"> <i class="fa fa-twitter"></i> </a></li>
+                            <li><a href="{{company_contacts[0].linkedin_account}}"> <i class="fa fa-youtube"></i> </a></li>
+                        </ul>
+                    {% endif %}
+
                 </div>
             </div>
             <div class="col-xl-3 col-md-3">
                 <div class="single_location">
                     <h3> <img src="/assets/as_du_transport/as_du_transport_public/img/icon/address.svg" alt=""> Location</h3>
-                    <p>600/D, Kings road, Green lane
-                        NewYork-2563</p>
+                    <p>{{company_contacts[0].adresse}}</p>
                 </div>
             </div>
             <div class="col-xl-3 col-md-3">
                 <div class="single_location">
                     <h3> <img src="/assets/as_du_transport/as_du_transport_public/img/icon/support.svg" alt=""> Location</h3>
-                    <p>+10 267 3563 4562 <br>
-                        support@logistico.com</p>
+                    <p>{{company_contacts[0].telephone}} <br>
+                        {{company_contacts[0].email}}</p>
                 </div>
             </div>
         </div>

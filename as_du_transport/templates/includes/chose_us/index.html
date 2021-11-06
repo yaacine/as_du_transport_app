@@ -1,4 +1,4 @@
-{% set why_choose_us=  frappe.get_all("Pourquoi nous" ,fields=['image','intro','argument1','argument1'], start=0, page_length=1)%}
+{% set why_choose_us=  frappe.get_all("Pourquoi nous" ,fields=['image','intro','argument1','argument2','argument3'], start=0, page_length=1)%}
 {% if why_choose_us%}
 <div class="chose_area ">
     <div class="container">
@@ -21,7 +21,7 @@
                         </ul>
 
                         <div class="about_btn">
-                            <a class="boxed-btn3-line" href="about.html">About Us</a>
+                            <a class="boxed-btn3-line" href="/free_quote">Devis Gratuit</a>
                         </div>
                     </div>
                 </div>
