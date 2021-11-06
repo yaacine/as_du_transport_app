@@ -4,5 +4,5 @@
 # import frappe
 import unittest
 
-class TestPourquoinouschoisir(unittest.TestCase):
+class TestPourquoinous(unittest.TestCase):
 	pass

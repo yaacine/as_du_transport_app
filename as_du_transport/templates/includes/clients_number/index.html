@@ -1,6 +1,8 @@
-{% set clients_number= frappe.get_all("Compteur clients" ,fields=['covered_cities','successfull_missions','satisfied_clients','success_stories'], start=0, page_length=1) %}
+{% set clients_number= "hello"  %}
 {% if clients_number%}
+<!-- 
 
+    frappe.get_all("Compteur clients" ,fields=['covered_cities','successfull_missions','satisfied_clients','success_stories'], start=0, page_length=1)
 <div class="counter_area">
     <div class="container">
         <div class="offcan_bg">
@@ -33,6 +35,6 @@
         </div>
 
     </div>
-</div>
+</div> -->
 
 {% endif %}

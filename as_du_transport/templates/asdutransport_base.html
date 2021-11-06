@@ -45,7 +45,9 @@
                             <div class="logo">
                                 <a href="/">
                                     {% set  company_logo= frappe.get_all("Logo Entreprise", fields=['image'], start=0, page_length=1) %}
+                                    {% if company_logo|length > 0  %}
                                     <img src="{{company_logo[0].image}}"  height="70px"  width="140"  alt="">
+                                    {% endif %}
                                 </a>
                             </div>
                         </div>
@@ -54,8 +56,10 @@
                                 <div class="short_contact_list">
                                     <ul>
                                         {% set company_contacts= frappe.get_all("Contacts", fields=['mobile','email','telephone','adresse','facebook_account','twitter_account','linkedin_account'], start=0, page_length=1) %}
+                                        {% if company_contacts |length > 0 %}
                                         <li><a href="#"> <i class="fa fa-envelope"></i> {{company_contacts[0].email}}</a></li>
                                         <li><a href="#"> <i class="fa fa-phone"></i>{{company_contacts[0].mobile}}</a></li>
+                                        {% endif%}
                                     </ul>
                                 </div>
 
