@@ -26,28 +26,32 @@
             <div  class="col-lg-1 mb-5 mb-lg-0"></div>
             <div class="col-lg-10 mb-5 mb-lg-0">
                 <div class="blog_left_sidebar">
-                    {% for blogpost in blogposts %}
-                        <article class="blog_item">
-                            <div class="blog_item_img">
-                                <img class="card-img rounded-0" src="{{blogpost.meta_image}}" height="350vmax" alt="">
-                                <a href="#" class="blog_item_date">
-                                    <h3>{{blogpost.published_on}}</h3>
-                                    <!-- <p>Jan</p> -->
-                                </a>
-                            </div>
+                    {% if  blogposts %}
+                        {% for blogpost in blogposts %}
+                            <article class="blog_item">
+                                <div class="blog_item_img">
+                                    <img class="card-img rounded-0" src="{{blogpost.meta_image}}" height="350vmax" alt="">
+                                    <a href="#" class="blog_item_date">
+                                        <h3>{{blogpost.published_on}}</h3>
+                                        <!-- <p>Jan</p> -->
+                                    </a>
+                                </div>
 
-                            <div class="blog_details">
-                                <a class="d-inline-block" href="/our-blog/details/{{blogpost.name}}">
-                                    <h2>{{blogpost.title}}</h2>
-                                </a>
-                                <p>{{blogpost.blog_intro}}</p>
-                                <ul class="blog-info-link">
-                                    <li><a href="#"><i class="fa fa-clock-o"></i> Lecture en {{blogpost.read_time}}</a></li>
-                                    <!-- <li><a href="#"><i class="fa fa-comments"></i> 03 Comments</a></li> -->
-                                </ul>
-                            </div>
-                        </article>
-                    {% endfor %}
+                                <div class="blog_details">
+                                    <a class="d-inline-block" href="/our-blog/details/{{blogpost.name}}">
+                                        <h2>{{blogpost.title}}</h2>
+                                    </a>
+                                    <p>{{blogpost.blog_intro}}</p>
+                                    <ul class="blog-info-link">
+                                        <li><a href="#"><i class="fa fa-clock-o"></i> Lecture en {{blogpost.read_time}}</a></li>
+                                        <!-- <li><a href="#"><i class="fa fa-comments"></i> 03 Comments</a></li> -->
+                                    </ul>
+                                </div>
+                            </article>
+                        {% endfor %}
+    
+                    {% endif %}
+                    
 
 
                     <!-- <article class="blog_item">
