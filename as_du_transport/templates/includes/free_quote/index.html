@@ -20,22 +20,22 @@
                             <div class="row">
                                 <div class="col-xl-6">
                                     <div class="input_field">
-                                        <input type="text" name="full_customer_name" placeholder="Votre nom">
+                                        <input type="text" name="full_customer_name" placeholder="Votre nom" required>
                                     </div>
                                 </div>
                                 <div class="col-xl-6">
                                     <div class="input_field">
-                                        <input type="email" name="email" placeholder="Email">
+                                        <input type="email" name="email" placeholder="Email" required>
                                     </div>
                                 </div>
                                 <div class="col-xl-6">
                                     <div class="input_field">
-                                        <input type="tel" name="phone_number" placeholder="Téléphone">
+                                        <input type="tel" name="phone_number" placeholder="Téléphone" required>
                                     </div>
                                 </div>
                                 <div class="col-xl-6">
                                     <div class="input_field">
-                                        <select class="wide" name="customer_type" >
+                                        <select class="wide" name="customer_type" required>
                                             <option data-display="Vous etes">Vous etes</option>
                                             <option value="entreprise">Entreprise</option>
                                             <option value="particulier">Particuler</option>
@@ -44,7 +44,7 @@
                                 </div>
                                 <div class="col-xl-6">
                                     <div class="input_field">
-                                        <select class="wide" name="service_type">
+                                        <select class="wide" name="service_type" required>
                                             <option data-display="Quel service">Quel service</option>
                                             {% set services= frappe.get_list("Service", fields=['name','service_title'] )%}
                                             {% for service in services %}
@@ -60,7 +60,7 @@
                                 </div>
                                 <div class="col-xl-6">
                                     <div class="input_field">
-                                        <select class="wide" name="sending_type">
+                                        <select class="wide" name="sending_type" required>
                                             <option data-display="Type d'envoi">Type d'envoi</option>
                                             <option value="plis">Plis</option>
                                             <option value="colis">Colis</option>
@@ -69,20 +69,20 @@
                                         </select>
                                     </div>
                                 </div>
-                                <div class="col-xl-6">
+                                <div class="col-xl-6" >
                                     <div class="input_field">
-                                        <input type="date" name="date" placeholder="Date">
+                                        <input type="date" name="date" placeholder="Date" required>
                                     </div>
                                 </div>
                                 <div class="col-xl-6">
                                     <div class="input_field">
-                                        <input type="time" name="time" placeholder="Heure">
+                                        <input type="time" name="time" placeholder="Heure" required>
                                     </div>
                                 </div>
 
                                 <div class="col-xl-6">
                                     <div class="input_field">
-                                        <input type="number" name="quantity" placeholder="Quantité">
+                                        <input type="number" name="quantity" placeholder="Quantité" required>
                                     </div>
                                 </div>
                                 <div class="col-xl-12">
@@ -103,3 +103,27 @@
         </div>
     </div>
     <!-- Estimate_area end  -->
+
+  
+
+    <script type="text/javascript">
+        window.addEventListener("load", () => {
+            const form = document.querySelector("form");
+            form.addEventListener("submit", (e) => {
+                e.preventDefault();
+                let data = new FormData(form);
+                console.log(data);
+                axios({
+                    method: "post",
+                    url: "http://localhost:8001/api/resource/Demande Devis",
+                    data: data,
+                })
+                    .then((res) => {
+                        console.log(res);
+                    })
+                    .catch((err) => {
+                        throw err;
+                    });
+            });
+        });
+    </script>
