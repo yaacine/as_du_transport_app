@@ -69,19 +69,19 @@
                 <div class="col-lg-8">
                     <form class="form-contact contact_form" action="contact_process.php" method="post" id="contactForm" novalidate="novalidate">
                         <div class="row">
-                            <div class="col-12">
+                            <!-- <div class="col-12">
                                 <div class="form-group">
                                     <input class="form-control" name="subject" id="subject" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Introduisez le sujet'" placeholder="Introduisez le sujet ">
                                 </div>
-                            </div>
+                            </div> -->
                             <div class="col-12">
                                 <div class="form-group">
-                                    <textarea class="form-control w-100" name="message" id="message" cols="30" rows="9" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Votre Message'" placeholder=" message"></textarea>
+                                    <textarea class="form-control w-100" name="message_body" id="message" cols="30" rows="9" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Votre Message'" placeholder=" message"></textarea>
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <div class="form-group">
-                                    <input class="form-control valid" name="name" id="name" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Introduisez votre nom'" placeholder="Introduisez votre nom">
+                                    <input class="form-control valid" name="full_name" id="name" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Introduisez votre nom'" placeholder="Introduisez votre nom">
                                 </div>
                             </div>
                             <div class="col-sm-6">
@@ -122,6 +122,31 @@
             </div>
         </div>
     </section>
+
+    <script type="text/javascript">
+        window.addEventListener("load", () => {
+            const form = document.querySelector("form");
+            form.addEventListener("submit", (e) => {
+                e.preventDefault();
+                let data = new FormData(form);
+                console.log(data);
+                axios({
+                    method: "post",
+                    url: "http://localhost:8001/api/resource/Message Client",
+                    data: data,
+                    headers: {
+                        Authorization: 'token api_key:api_secret'
+                    }
+                })
+                    .then((res) => {
+                        console.log(res);
+                    })
+                    .catch((err) => {
+                        throw err;
+                    });
+            });
+        });
+    </script>
 <!-- ================ contact section end ================= -->
 
 {% endblock %}
