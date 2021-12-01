@@ -6,8 +6,7 @@
                 <div class="col-xl-4 col-lg-4 col-md-5">
                     <div class="Estimate_info">
                         <h3>Demander Votre Devis Gratuitement</h3>
-                        <p>Esteem spirit temper too say adieus who direct esteem. It look estee luckily or picture
-                            placing.</p>
+                        <p>Intoduises les informations de la course que vous voulez faire et nous vous enverrons le devis par email</p>
                         {% set company_contacts= frappe.get_all("Contacts", fields=['mobile'], start=0, page_length=1) %}
                         {% if company_contacts %}
                             <a href="#" class="boxed-btn3">{{company_contacts[0].mobile}}</a>
@@ -21,62 +20,79 @@
                             <div class="row">
                                 <div class="col-xl-6">
                                     <div class="input_field">
-                                        <input type="text" placeholder="Your name">
+                                        <input type="text" name="full_customer_name" placeholder="Votre nom">
                                     </div>
                                 </div>
                                 <div class="col-xl-6">
                                     <div class="input_field">
-                                        <input type="email" placeholder="Email">
+                                        <input type="email" name="email" placeholder="Email">
                                     </div>
                                 </div>
                                 <div class="col-xl-6">
                                     <div class="input_field">
-                                        <select class="wide">
-                                            <option data-display="Product type">Product type</option>
-                                            <option value="1">small</option>
-                                            <option value="2">standard</option>
-                                            <option value="3">high</option>
+                                        <input type="tel" name="phone_number" placeholder="Téléphone">
+                                    </div>
+                                </div>
+                                <div class="col-xl-6">
+                                    <div class="input_field">
+                                        <select class="wide" name="customer_type" >
+                                            <option data-display="Vous etes">Vous etes</option>
+                                            <option value="entreprise">Entreprise</option>
+                                            <option value="particulier">Particuler</option>
                                         </select>
                                     </div>
                                 </div>
                                 <div class="col-xl-6">
                                     <div class="input_field">
-                                        <select class="wide">
-                                            <option data-display="Product size">Product size</option>
-                                            <option value="1">M</option>
-                                            <option value="2">L</option>
-                                            <option value="3">Xl</option>
+                                        <select class="wide" name="service_type">
+                                            <option data-display="Quel service">Quel service</option>
+                                            {% set services= frappe.get_list("Service", fields=['name','service_title'] )%}
+                                            {% for service in services %}
+                                            <option value="{{service.service_title}}"> {{service.service_title}}</option>
+                                            {% endfor %}
+
+                                            {% set services_dem= frappe.get_list("Service demenagement", fields=['name','service_title'] )%}
+                                            {% for service in services_dem %}
+                                            <option value="{{service.service_title}}"> {{service.service_title}}</option>
+                                            {% endfor %}
                                         </select>
                                     </div>
                                 </div>
                                 <div class="col-xl-6">
                                     <div class="input_field">
-                                        <select class="wide">
-                                            <option data-display="City of departure">City of departure</option>
-                                            <option value="1">departure</option>
-                                            <option value="2">departure</option>
-                                            <option value="3">departure</option>
+                                        <select class="wide" name="sending_type">
+                                            <option data-display="Type d'envoi">Type d'envoi</option>
+                                            <option value="plis">Plis</option>
+                                            <option value="colis">Colis</option>
+                                            <option value="Palette">Palette</option>
+                                            <option value="Autre">Autre</option>
                                         </select>
                                     </div>
                                 </div>
                                 <div class="col-xl-6">
                                     <div class="input_field">
-                                        <select class="wide">
-                                            <option data-display="Delivery city">City of departure</option>
-                                            <option value="1">Delivery</option>
-                                            <option value="2">Delivery</option>
-                                            <option value="3">Delivery</option>
-                                        </select>
+                                        <input type="date" name="date" placeholder="Date">
+                                    </div>
+                                </div>
+                                <div class="col-xl-6">
+                                    <div class="input_field">
+                                        <input type="time" name="time" placeholder="Heure">
+                                    </div>
+                                </div>
+
+                                <div class="col-xl-6">
+                                    <div class="input_field">
+                                        <input type="number" name="quantity" placeholder="Quantité">
                                     </div>
                                 </div>
                                 <div class="col-xl-12">
                                     <div class="input_field">
-                                        <textarea placeholder="Message"></textarea>
+                                        <textarea placeholder="Message (optionnel)"></textarea>
                                     </div>
                                 </div>
                                 <div class="col-xl-12">
                                     <div class="input_field">
-                                        <button class="boxed-btn3-line" type="submit">Send Estimate</button>
+                                        <button class="boxed-btn3-line" type="submit">Envoyer</button>
                                     </div>
                                 </div>
                             </div>
