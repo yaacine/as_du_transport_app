@@ -62,7 +62,7 @@
   {
    "fieldname": "quantity",
    "fieldtype": "Int",
-   "label": "Qnatiti\u00e9"
+   "label": "Quantite"
   },
   {
    "fieldname": "time",

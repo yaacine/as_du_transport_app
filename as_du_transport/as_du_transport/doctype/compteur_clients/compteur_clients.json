@@ -20,7 +20,7 @@
   {
    "fieldname": "successfull_missions",
    "fieldtype": "Int",
-   "label": "Missions r\u00e9ussies"
+   "label": "Missions ressies"
   },
   {
    "fieldname": "satisfied_clients",
