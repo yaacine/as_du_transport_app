@@ -35,7 +35,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-11-01 10:30:49.973275",
+ "modified": "2021-12-27 07:28:16.298428",
  "modified_by": "Administrator",
  "module": "As Du Transport",
  "name": "Horaires de service semaine",
@@ -52,6 +52,15 @@
    "role": "System Manager",
    "share": 1,
    "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Guest",
+   "share": 1
   }
  ],
  "sort_field": "modified",

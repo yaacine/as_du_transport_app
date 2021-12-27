@@ -35,7 +35,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-11-06 16:23:48.697174",
+ "modified": "2021-12-27 07:25:39.503265",
  "modified_by": "Administrator",
  "module": "As Du Transport",
  "name": "Compteur clients",
@@ -52,6 +52,15 @@
    "role": "System Manager",
    "share": 1,
    "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Guest",
+   "share": 1
   }
  ],
  "sort_field": "modified",

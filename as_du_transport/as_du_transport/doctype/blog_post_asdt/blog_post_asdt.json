@@ -56,7 +56,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-10-30 22:27:54.780758",
+ "modified": "2021-12-27 07:29:32.759691",
  "modified_by": "Administrator",
  "module": "As Du Transport",
  "name": "Blog Post ASDT",
@@ -73,6 +73,15 @@
    "role": "System Manager",
    "share": 1,
    "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Guest",
+   "share": 1
   }
  ],
  "sort_field": "modified",
