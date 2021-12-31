@@ -1,5 +1,5 @@
 {% set  company_logo= frappe.get_all("Logo Entreprise", fields=['image'], start=0, page_length=1) %}
-{% set company_contacts= frappe.get_all("Contacts", fields=['mobile','email','telephone','adresse','facebook_account','twitter_account','linkedin_account'], start=0, page_length=1) %}   
+{% set company_contacts= frappe.get_all("Contacts", fields=['mobile','email','telephone','adresse','facebook_account','twitter_account','linkedin_account','instagram_account'], start=0, page_length=1) %}   
 
 <div class="contact_location">
     <div class="container">
@@ -15,10 +15,10 @@
                     </div>
                     {% if company_contacts |length > 0 %}
                         <ul>
-                            <li><a href="{{company_contacts[0].facebook_account}}"> <i class="fa fa-facebook"></i> </a></li>
-                            <li><a href="{{company_contacts[0].facebook_account}}"> <i class="fa fa-google-plus"></i> </a></li>
-                            <li><a href="{{company_contacts[0].twitter_account}}"> <i class="fa fa-twitter"></i> </a></li>
-                            <li><a href="{{company_contacts[0].linkedin_account}}"> <i class="fa fa-youtube"></i> </a></li>
+                            <li><a target="_blank" href="{{company_contacts[0].facebook_account}}"> <i class="fa fa-facebook"></i> </a></li>
+                            <li><a target="_blank" href="{{company_contacts[0].instagram_account}}"> <i class="fa fa-instagram"></i> </a></li>
+                            <li><a target="_blank" href="{{company_contacts[0].twitter_account}}"> <i class="fa fa-twitter"></i> </a></li>
+                            <li><a target="_blank" href="{{company_contacts[0].linkedin_account}}"> <i class="fa fa-linkedin"></i> </a></li>
                         </ul>
                     {% endif %}
 

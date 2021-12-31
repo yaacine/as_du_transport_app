@@ -1,0 +1,52 @@
+
+{% extends 'templates/asdutransport_base.html' %}
+
+{% block content %}
+
+<!-- bradcam_area  -->
+<div class="bradcam_area bradcam_bg_1">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="bradcam_text text-center">
+                    <h3>À Propos De Nous</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--/ bradcam_area  -->
+<!-- service_area  -->
+<div class="service_area">
+    <div class="container">
+        {% if about_us|length > 0  %}
+        {{about_us[0].about_asdt}}
+        {% endif %}
+    </div>
+</div>
+<!--/ service_area  -->
+
+<!-- contact_action_area  -->
+    {% include 'templates/includes/contact_action_area/index.html' %}
+<!-- /contact_action_area  -->
+
+<!-- chose_area  -->
+    {% include 'templates/includes/chose_us/index.html' %} 
+<!--/ chose_area  -->
+
+<!-- counter_area  -->
+    {% include 'templates/includes/clients_number/index.html' %}
+<!-- /counter_area  -->
+
+<!-- Estimate_area start  -->
+{% include 'templates/includes/free_quote/index.html' %}
+<!-- Estimate_area end  -->
+
+<!-- contact_location  -->
+    {% include 'templates/includes/contact_location/index.html' %}
+<!--/ contact_location  -->
+
+
+
+
+{% endblock %}
