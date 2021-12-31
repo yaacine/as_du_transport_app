@@ -129,6 +129,7 @@
                     .then((res) => {
                         alert('Succes: Votre demande est soumise. Un de nos agents va vous contacter. Merci!')
                         console.log(res);
+                        form.reset()
                     })
                     .catch((err) => {
                         throw err;

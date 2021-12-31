@@ -150,7 +150,9 @@
                     }
                 })
                     .then((res) => {
+                        alert('Succes: Merci de nous avoir contacté!')
                         console.log(res);
+                        form.reset()
                     })
                     .catch((err) => {
                         throw err;
