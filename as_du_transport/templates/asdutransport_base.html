@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- <link rel="manifest" href="site.webmanifest"> -->
-    <link rel="shortcut icon" type="image/x-icon" href="/assets/as_du_transport/as_du_transport_public/img/favicon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/as_du_transport/as_du_transport_public/img/favicon.ico">
     <!-- Place favicon.ico in the root directory -->
 
     <!-- CSS here -->
@@ -46,7 +46,7 @@
                                 <a href="/">
                                     {% set  company_logo= frappe.get_all("Logo Entreprise", fields=['image'], start=0, page_length=1) %}
                                     {% if company_logo|length > 0  %}
-                                    <img src="{{company_logo[0].image}}"  height="70px"  width="140"  alt="">
+                                    <img src="{{company_logo[0].image}}"   alt="">
                                     {% endif %}
                                 </a>
                             </div>
@@ -78,7 +78,7 @@
                             <div class="col-12 d-block d-lg-none">
                                 <div class="logo">
                                     <a href="index.html">
-                                        <img src="{{company_logo[0].image}}" alt="">
+                                        <img src="{{company_logo[0].image}}" alt="as du transport logo">
                                     </a>
                                 </div>
                             </div>
