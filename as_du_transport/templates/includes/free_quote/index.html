@@ -9,7 +9,7 @@
                         <p>Intoduisez les informations de la course que vous voulez faire et nous vous enverrons le devis par email</p>
                         {% set company_contacts= frappe.get_all("Contacts", fields=['mobile'], start=0, page_length=1) %}
                         {% if company_contacts %}
-                            <a href="#" class="boxed-btn3">{{company_contacts[0].mobile}}</a>
+                            <a href="tel:{{company_contacts[0].mobile}}" class="boxed-btn3">{{company_contacts[0].mobile}}</a>
                         {% endif %} 
                         
                     </div>

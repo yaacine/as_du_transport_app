@@ -16,7 +16,7 @@
                     <div class="call_add_action">
                         {% set company_contacts= frappe.get_all("Contacts", fields=['mobile'], start=0, page_length=1) %}
                         {% if company_contacts %}
-                            <a href="#" class="boxed-btn3">{{company_contacts[0].mobile}}</a>
+                            <a href="tel:{{company_contacts[0].mobile}}" class="boxed-btn3">{{company_contacts[0].mobile}}</a>
                         {% endif %}   
                         
                     </div>
